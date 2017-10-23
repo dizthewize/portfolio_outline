@@ -1,0 +1,198 @@
+@import url("https://fonts.googleapis.com/css?family=Alegreya+Sans+SC:300,400|Overpass:300,400");
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+a,
+abbr,
+acronym,
+address,
+applet,
+article,
+aside,
+audio,
+b,
+big,
+blockquote,
+body,
+canvas,
+caption,
+center,
+cite,
+code,
+dd,
+del,
+details,
+dfn,
+div,
+dl,
+dt,
+em,
+embed,
+fieldset,
+figcaption,
+figure,
+footer,
+form,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+header,
+hgroup,
+html,
+i,
+iframe,
+img,
+ins,
+kbd,
+label,
+legend,
+li,
+mark,
+menu,
+nav,
+object,
+ol,
+output,
+p,
+pre,
+q,
+ruby,
+s,
+samp,
+section,
+small,
+span,
+strike,
+strong,
+sub,
+summary,
+sup,
+table,
+tbody,
+td,
+tfoot,
+th,
+thead,
+time,
+tr,
+tt,
+u,
+ul,
+var,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol,
+ul {
+  list-style: none; }
+
+blockquote,
+q {
+  quotes: none; }
+
+blockquote:after,
+blockquote:before,
+q:after,
+q:before {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+body {
+  color: #a7a7a7;
+  font-family: "Overpass", sans-serif;
+  line-height: 1.6;
+  background: #ffffff;
+  font-size: .875rem; }
+
+img {
+  max-width: 100%; }
+
+h1, h2, p {
+  margin-top: 0;
+  margin-bottom: .75em; }
+
+h1 {
+  color: #03afc2;
+  line-height: 1;
+  font-size: 3.125rem; }
+
+h2 {
+  font-size: 2rem;
+  letter-spacing: 0.3em;
+  color: #606060;
+  text-transform: uppercase;
+  line-height: 1;
+  font-family: "Alegreya Sans SC", sans-serif; }
+
+.welcome {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center; }
+  .welcome h1 {
+    font-size: 1.5rem;
+    font-weight: 400;
+    color: #223843;
+    line-height: 2;
+    text-align: center; }
+    .welcome h1 span {
+      font-size: 5.5rem;
+      letter-spacing: 0.3em;
+      color: #03afc2;
+      text-transform: uppercase;
+      line-height: 1;
+      font-family: "Alegreya Sans SC", sans-serif;
+      display: block; }
+    .welcome h1::before, .welcome h1::after {
+      content: '';
+      width: 80%;
+      height: 1px;
+      background: #223843;
+      display: block; }
+    .welcome h1::before {
+      margin: 0 auto 2em; }
+    .welcome h1::after {
+      margin: 2em auto 0; }
+
+.intro {
+  display: flex;
+  align-items: center;
+  justify-content: center; }
+  .intro .intro-text {
+    margin: 0 auto;
+    text-align: center;
+    background: #223843;
+    padding: 2rem;
+    color: rgba(255, 255, 255, 0.8); }
+    .intro .intro-text h2 {
+      color: #ffffff; }

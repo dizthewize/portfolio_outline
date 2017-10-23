@@ -1,0 +1,15 @@
+{
+  "name": "portfolio_outline",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build-css": "node-sass-chokidar ./src src/ -o public/css/ --watch --recursive"
+  },
+  "author": "Martez Conner",
+  "license": "ISC",
+  "dependencies": {
+    "node-sass-chokidar": "0.0.3"
+  }
+}
