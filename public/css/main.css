@@ -127,6 +127,11 @@ table {
   border-collapse: collapse;
   border-spacing: 0; }
 
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0; }
+
 body {
   color: #a7a7a7;
   font-family: "Overpass", sans-serif;
@@ -138,61 +143,204 @@ img {
   max-width: 100%; }
 
 h1, h2, p {
-  margin-top: 0;
-  margin-bottom: .75em; }
+  margin-top: 0; }
 
 h1 {
-  color: #03afc2;
+  color: #A0CCE3;
   line-height: 1;
   font-size: 3.125rem; }
 
 h2 {
-  font-size: 2rem;
-  letter-spacing: 0.3em;
-  color: #606060;
-  text-transform: uppercase;
-  line-height: 1;
-  font-family: "Alegreya Sans SC", sans-serif; }
+  font-size: 2rem; }
 
 .welcome {
   height: 100vh;
   display: flex;
   align-items: center;
-  justify-content: center; }
+  justify-content: center;
+  background: #a7a7a7; }
   .welcome h1 {
-    font-size: 1.5rem;
+    font-size: 3.5rem;
     font-weight: 400;
-    color: #223843;
+    color: #1B2355;
     line-height: 2;
     text-align: center; }
     .welcome h1 span {
-      font-size: 5.5rem;
-      letter-spacing: 0.3em;
-      color: #03afc2;
-      text-transform: uppercase;
-      line-height: 1;
-      font-family: "Alegreya Sans SC", sans-serif;
-      display: block; }
+      font-size: 6.5rem;
+      color: #A0CCE3;
+      letter-spacing: 6.5px;
+      display: block;
+      transition: all .5s ease-in;
+      cursor: pointer; }
+      .welcome h1 span:hover {
+        transition: all .5s ease-in;
+        color: #F66464; }
     .welcome h1::before, .welcome h1::after {
       content: '';
       width: 80%;
       height: 1px;
-      background: #223843;
+      background: #1B2355;
       display: block; }
     .welcome h1::before {
-      margin: 0 auto 2em; }
+      margin: 0 auto 1.5em; }
     .welcome h1::after {
-      margin: 2em auto 0; }
+      margin: 1.2em auto 0; }
 
 .intro {
   display: flex;
   align-items: center;
-  justify-content: center; }
+  justify-content: center;
+  width: 100%;
+  padding: 2em 0;
+  background: #F66464; }
   .intro .intro-text {
-    margin: 0 auto;
+    height: 100%;
     text-align: center;
-    background: #223843;
+    background: #1B2355;
     padding: 2rem;
     color: rgba(255, 255, 255, 0.8); }
     .intro .intro-text h2 {
       color: #ffffff; }
+
+.about-me {
+  padding: 0 0 4em 0;
+  position: relative; }
+
+.about-title {
+  margin-bottom: .25em;
+  font-family: "Alegreya Sans SC", sans-serif;
+  color: #A0CCE3;
+  position: absolute;
+  top: 1em;
+  right: 3.2em;
+  font-size: 3.5rem; }
+
+.about-subtitle {
+  font-size: 2rem;
+  letter-spacing: 0.4em;
+  margin: .4em 0;
+  color: #F66464; }
+
+.about-text {
+  text-align: center; }
+
+.intro, .about-me, .portfolio {
+  width: 90%;
+  margin: 0 auto;
+  max-width: 1200px; }
+
+.portfolio {
+  padding: 5%;
+  height: 100vh;
+  background: #a7a7a7; }
+
+.projects {
+  display: grid;
+  height: 100%;
+  grid-template-rows: repeat(5, 1fr);
+  grid-template-columns: repeat(6, 1fr);
+  grid-gap: 2px; }
+  .projects .project-item {
+    position: relative;
+    background: #F66464;
+    color: #353535;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden; }
+    .projects .project-item.small {
+      grid-row: span 1;
+      grid-column: span 2; }
+    .projects .project-item.medium {
+      grid-row: span 2;
+      grid-column: span 2; }
+    .projects .project-item.large {
+      grid-row: span 3;
+      grid-column: span; }
+    .projects .project-item.half {
+      grid-row: span 3;
+      grid-column: span 2; }
+    .projects .project-item.tall {
+      grid-row: span 3;
+      grid-column: span 2; }
+    .projects .project-item.wide {
+      grid-row: span 2;
+      grid-column: span 4; }
+    .projects .project-item .overlay {
+      position: absolute;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      background: red;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      opacity: 0;
+      transition: all .5s ease-in; }
+      .projects .project-item .overlay:hover {
+        transition: all .5s ease-in;
+        opacity: 1; }
+      .projects .project-item .overlay .project-title {
+        font-size: 1.55rem;
+        position: absolute;
+        top: 1rem; }
+      .projects .project-item .overlay .project-title,
+      .projects .project-item .overlay .project-desc {
+        padding-bottom: 8px; }
+      .projects .project-item .overlay .project-desc {
+        text-align: center;
+        padding: 0.4rem; }
+      .projects .project-item .overlay .project-tech {
+        margin-left: 5px;
+        position: absolute;
+        bottom: 0;
+        font-size: 1.2rem;
+        text-decoration: none;
+        color: #A0CCE3; }
+
+@media (max-width: 1300px) {
+  .about-me {
+    display: block;
+    padding: 1em;
+    text-align: center; }
+    .about-me .about-title {
+      position: initial;
+      font-size: 2.9rem; }
+    .about-me .about-subtitle {
+      margin: 0 0 5px 0;
+      letter-spacing: 0.2em;
+      font-size: 1.6rem; } }
+
+@media (max-width: 800px) {
+  .welcome h1 {
+    font-size: 2rem; }
+    .welcome h1 span {
+      font-size: 4.5rem; }
+  .intro {
+    padding: 1rem;
+    width: 100%; }
+    .intro .intro-text {
+      padding: 0.5rem; }
+  .about-me {
+    display: block;
+    padding: 1em;
+    text-align: center; }
+    .about-me .about-title {
+      position: initial;
+      font-size: 1.9rem; }
+    .about-me .about-subtitle {
+      margin: 0 0 5px 0;
+      letter-spacing: 0.2em;
+      font-size: 1.6rem; }
+  .portfolio {
+    width: 100%; }
+  .projects {
+    display: block; }
+    .projects .project-item {
+      padding: 10px 0; }
+      .projects .project-item .overlay {
+        display: block;
+        opacity: 1;
+        height: 100%;
+        width: 100%; } }
